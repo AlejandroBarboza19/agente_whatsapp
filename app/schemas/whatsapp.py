@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional, List
 
 
@@ -8,14 +8,12 @@ class TextMessage(BaseModel):
 
 class Message(BaseModel):
     id: str
-    from_: str
+    from_: str = Field(alias="from")
     timestamp: str
     type: str
     text: Optional[TextMessage] = None
 
-    class Config:
-        populate_by_name = True
-        fields = {"from_": "from"}
+    model_config = {"populate_by_name": True}
 
 
 class Value(BaseModel):
