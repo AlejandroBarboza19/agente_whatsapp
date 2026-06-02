@@ -54,7 +54,7 @@ async def receive_message(request: Request):
 
         send_whatsapp_message(
             phone,
-            f"Hola 👋 dijiste: {text}"
+            f"Hola 👋 perra  dijiste: {text}"
         )
 
     except Exception as e:
