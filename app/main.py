@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Request
+from fastapi.responses import PlainTextResponse
 from dotenv import load_dotenv
 import requests
 import os
@@ -26,9 +27,9 @@ async def verify_webhook(
 ):
 
     if hub_verify_token == VERIFY_TOKEN:
-        return int(hub_challenge)
+        return PlainTextResponse(content=hub_challenge)
 
-    return {"error": "Token inválido"}
+    return PlainTextResponse(content="Token inválido", status_code=403)
 
 
 # RECIBIR MENSAJES
