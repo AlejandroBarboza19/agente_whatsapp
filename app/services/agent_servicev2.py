@@ -11,7 +11,7 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 load_dotenv()
 
 llm = ChatOpenAI(
-    model="",
+    model="openai/gpt-4o-mini",
     openai_api_key=os.getenv("OPENROUTER_API_KEY"),
     openai_api_base="https://openrouter.ai/api/v1"
 )
