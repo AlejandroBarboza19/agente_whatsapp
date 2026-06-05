@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from app.core.config import get_settings
 from app.core.database import get_db
 from app.schemas.whatsapp import WebhookPayload
-from app.services.agent_service import process_message
+from app.services.agent_servicev2 import process_message
 
 router = APIRouter()
 settings = get_settings()
@@ -48,7 +48,7 @@ async def receive_message(
 
                     print(f"[{phone}]: {text}")
 
-                    response_text = process_message(phone, text, db)
+                    response_text = process_message(phone, text)
                     _send_whatsapp_message(phone, response_text)
 
     except Exception as e:
