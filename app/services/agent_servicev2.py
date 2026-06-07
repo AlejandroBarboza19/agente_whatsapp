@@ -101,7 +101,8 @@ db_and_agent = create_sql_agent(
     llm=llm,
     db=db_for_agent,
     prompt=prompt,
-    agent_type="openai-tools"
+    agent_type="openai-tools",
+    verbose=True
 )
 
 
