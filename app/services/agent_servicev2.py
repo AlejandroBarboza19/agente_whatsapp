@@ -10,7 +10,7 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 load_dotenv()
 
 llm = ChatOpenAI(
-    model="sourceful/riverflow-v2.5-pro:free",
+    model="anthropic/claude-opus-4.8-fast",
     openai_api_key=os.getenv("OPENROUTER_API_KEY"),
     openai_api_base="https://openrouter.ai/api/v1",
     max_tokens=1000
