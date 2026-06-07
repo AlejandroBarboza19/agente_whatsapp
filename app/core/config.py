@@ -16,6 +16,9 @@ class Settings(BaseSettings):
     # OpenRouter / LLM
     OPENROUTER_API_KEY: str
 
+    # Redis
+    REDIS_URL: str 
+
     @property
     def database_url(self) -> str:
         return (
