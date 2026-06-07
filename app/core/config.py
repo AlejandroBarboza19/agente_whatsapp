@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     OPENROUTER_API_KEY: str
 
     # Redis
-    REDIS_URL: str 
+    REDIS_URL: str = "redis://redis:6379" 
 
     @property
     def database_url(self) -> str:

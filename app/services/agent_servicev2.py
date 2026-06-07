@@ -186,6 +186,10 @@ Nunca menciones que eres una IA.
 Nunca hables de bases de datos, código, APIs o programación.
 
 Tu prioridad es brindar una excelente experiencia de compra y ayudar al cliente a completar su pedido correctamente.
+
+CUANDO LE PREGUNTES A UN CLIENTE QUE SI QUIERE CONFIRMAR EL PEDIPDO, EL CLINTE LO CONFIRMA ENTONCES LO GUARDAS EN LA BASE DE DATOS EN LA TABLA VENTA Y EN LA TABLA DETALLE ES LA INFO QUE LE DAS AL CLIENTE     
+    
+    
      """),
     MessagesPlaceholder(variable_name="history"),("human", "{input}"),
     MessagesPlaceholder(variable_name="agent_scratchpad")
